@@ -29,11 +29,9 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
         http
                 .authorizeRequests()
-                    //.antMatchers("/testSecurity", "/pages/signUp", "/pages/home", "/pages/login").permitAll()
+                    .antMatchers("/testSecurity", "/pages/signUp", "/pages/home", "/pages/login").permitAll()
                     //.antMatchers("/manage").hasAuthority("ROLE_ADMIN")
                     .anyRequest().authenticated()
-                    .antMatchers("/userinfo", "/saveContent").authenticated()
-                    .antMatchers("/**").permitAll()
                 .and()
                     .formLogin()
                         .loginPage("/pages/login")
