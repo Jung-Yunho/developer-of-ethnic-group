@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>회원가입 페이지</title>
+</head>
+<body>
+<h1>회원 가입</h1>
+<hr>
+
+<form th:action="@{/pages/signUp}" method="post">
+    <input type="text" id="loginId" name="loginId" placeholder="loginId 입력" value="test01">
+    <input type="password" id="password" name="password" placeholder="password 입력" value="test01">
+    <input type="text" id="name" name="name" placeholder="username 입력" value="test01">
+    <input type="text" id="phone" name="phone" placeholder="phone 입력" value="01012345678">
+    <input type="text" id="nickname" name="nickname" placeholder="nickname 입력" value="test01">
+    <input type="text" id="email" name="email" placeholder="email 입력" value="test01@doeg.com">
+    <input type="text" id="addr1" name="addr1" placeholder="addr1 입력" value="서울">
+    <input type="text" id="addr2" name="addr2" placeholder="addr2 입력" value="마포구">
+    <button type="submit">가입하기</button>
+</form>
+</body>
+</html>

@@ -17,4 +17,9 @@ public class IndexController {
     public String join(){
         return "join.html";
     }
+
+    @GetMapping("/testSecurity")
+    public String testSecurity(){
+        return "testSecurity.html";
+    }
 }
