@@ -1,0 +1,22 @@
+Index: src/main/resources/application.properties
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>spring.devtools.livereload.enabled=true\r\nspring.freemarker.cache=false\r\nspring.thymeleaf.cache=false\r\nspring.thymeleaf.prefix=file:src/main/resources/templates/\r\n\r\nspring.datasource.driver-class-name=\r\nspring.datasource.url=\r\nspring.datasource.username=\r\nspring.datasource.password=
+===================================================================
+diff --git a/src/main/resources/application.properties b/src/main/resources/application.properties
+--- a/src/main/resources/application.properties	
++++ b/src/main/resources/application.properties	
+@@ -3,7 +3,7 @@
+ spring.thymeleaf.cache=false
+ spring.thymeleaf.prefix=file:src/main/resources/templates/
+ 
+-spring.datasource.driver-class-name=
+-spring.datasource.url=
+-spring.datasource.username=
+-spring.datasource.password=
+\ No newline at end of file
++spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
++spring.datasource.url=jdbc:mysql://doeg.chndvq3o0qpz.ap-northeast-2.rds.amazonaws.com/doeg
++spring.datasource.username= doeg
++spring.datasource.password= developer1!
+\ No newline at end of file
