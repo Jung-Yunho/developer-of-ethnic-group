@@ -41,6 +41,11 @@ public class MemberService implements UserDetailsService {
         Member member = memberDto.toEntity();
         BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
         member.setPassword(passwordEncoder.encode(member.getPassword()));
+
+        // 일반 가입 시 ROLE_MEMBER 세팅
+        // 관리자 생성 시 ROLE_ADMIN 세팅
+        // 위와 같이 처리되어야 함
+        memberDto.setRole("ROLE_MEMBER");
         return memberRepository.save(member).getMemberId();
     }
 }
