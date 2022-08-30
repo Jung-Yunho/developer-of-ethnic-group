@@ -31,6 +31,7 @@ public class SecurityTestController {
 
     @PostMapping("/pages/signUp")
     public String signUp(MemberDto memberDto){
+        memberDto.setRole("ROLE_MEMBER");
         memberService.save(memberDto);
         return "redirect:/pages/login";
     }
