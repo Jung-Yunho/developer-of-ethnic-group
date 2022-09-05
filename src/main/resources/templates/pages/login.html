@@ -1,16 +1,28 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.w3.org/1999/xhtml">
+<html
+    xmlns:th="http://www.thymeleaf.org"
+    xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+    layout:decorate="~{fragment/base}">
 <head>
-    <meta charset="UTF-8">
-    <title>로그인 페이지</title>
+    <!--base.html에 들어간 head 부분 제외하고 추가할 것-->
+    <title>개발의민족</title>
 </head>
-<body>
-<h1>로그인</h1>
-<hr>
-<form th:action="@{/pages/login}" method="post">
-    <input type="text" name="username" placeholder="account를 입력해주세요.">
-    <input type="password" name="password" placeholder="password를 입력해주세요.">
-    <button type="submit">로그인</button>
-</form>
+<!--base.html에 정의한 개별 페이지 부분-->
+<body layout:fragment="content">
+    <div class="wrapper">
+        <div class="logo_login">
+<!--            <img  style="display:block; margin:0 auto;" class="logoImg" th:src="@{/images/logo_sample.png}">-->
+            <div>
+                <span>LOGIN</span>
+            </div>
+        </div>
+
+        <form class="loginForm" th:action="@{/pages/login}" method="post">
+            <input type="text" name="username" placeholder="아이디">
+            <input type="password" name="password" placeholder="비밀번호">
+            <button type="submit" class="loginButton">로그인</button>
+        </form>
+
+    </div>
 </body>
 </html>
