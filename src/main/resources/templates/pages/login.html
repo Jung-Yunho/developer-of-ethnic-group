@@ -5,6 +5,7 @@
     layout:decorate="~{fragment/base}">
 <head>
     <!--base.html에 들어간 head 부분 제외하고 추가할 것-->
+    <link rel="stylesheet" type="text/css" th:href="@{/css/login.css}" />
     <title>개발의민족</title>
 </head>
 <!--base.html에 정의한 개별 페이지 부분-->
@@ -18,10 +19,30 @@
         </div>
 
         <form class="loginForm" th:action="@{/pages/login}" method="post">
+
             <input type="text" name="username" placeholder="아이디">
             <input type="password" name="password" placeholder="비밀번호">
+
+            <div>
+                <span>
+                    <a class="log_info" href="#">회원가입</a>&nbsp;|
+                    <a class="log_info" href="#">ID/PW찾기</a>
+                </span>
+            </div>
+
             <button type="submit" class="loginButton">로그인</button>
+
+            <!--Social Login-->
+            <ul class="social_login">
+                <li><a  href="#"><img th:src="@{/images/google_login.png}"></a></li>
+                <li class="social_middle"><a  href="#"><img th:src="@{/images/naver_login.png}"></a></li>
+                <li><a href="#"><img th:src="@{/images/kakao_login.png}"></a></li>
+            </ul>
+
         </form>
+
+
+
 
     </div>
 </body>
