@@ -53,7 +53,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         //설정을 통하여 해당 요청은 인증 대상에서 제외
         web
                 .ignoring()
-                    .antMatchers("/static/js/**","/static/css/**","/static/images/**");
+                    .antMatchers("/js/**","/css/**","/images/**");
     }
 
     @Override
