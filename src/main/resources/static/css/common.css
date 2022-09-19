@@ -37,7 +37,7 @@ body{
 }
 
 .navigation .nav_head .navWrap .memberButton{
-   display:inline-block;
+    display:inline-block;
 }
 
 .navigation .nav_head .navWrap .memberButton a{
@@ -149,4 +149,3 @@ body{
 .baseColor{
     background-color:#5852F2;
 }
-
