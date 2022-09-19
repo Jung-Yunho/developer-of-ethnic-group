@@ -1,9 +1,0 @@
-# Default ignored files
-/developer-of-ethnic-group.iws
-
-# Project exclude paths
-/.gradle/
-
-# Exclude properties files
-/src/main/resources/application.properties
-/src/main/resources/application-oauth.properties
